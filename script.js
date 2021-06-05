@@ -10,10 +10,10 @@ const startVideo = () =>{
 }
 
 Promise.all([//funcionan en paralelo
-    faceapi.nets.tinyFaceDetector.loadFromUri(`/models`), // detector de cara mas pequño y rapido
-    faceapi.nets.faceLandmark68Net.loadFromUri(`/models`), //registra las diferentes partes de la cara 
-    faceapi.nets.faceRecognitionNet.loadFromUri(`/models`), //reconoce donde esta la cara 
-    faceapi.nets.faceExpressionNet.loadFromUri(`/models`)//reconoce las emociones expresadas en la cara feliz,triste ,etc
+    faceapi.nets.tinyFaceDetector.loadFromUri(`models`), // detector de cara mas pequño y rapido
+    faceapi.nets.faceLandmark68Net.loadFromUri(`models`), //registra las diferentes partes de la cara 
+    faceapi.nets.faceRecognitionNet.loadFromUri(`models`), //reconoce donde esta la cara 
+    faceapi.nets.faceExpressionNet.loadFromUri(`models`)//reconoce las emociones expresadas en la cara feliz,triste ,etc
 
 ]).then(startVideo)
 
